@@ -1,0 +1,33 @@
+{
+  "http-enabled": true,
+  "http-host": "0.0.0.0",
+  "http-port": 8001,
+
+  "https-enabled": true,
+  "https-host": "0.0.0.0",
+  "https-port": 8002,
+
+  "web-ui-enabled": true,
+  "web-ui-username": "irvinjo",
+  "web-ui-password": "irvinjo",  
+  "web-ui-whitelist": ["127.0.0.1","190.236.239.200", "190.236.239.198"],
+
+  "ssl-key": "/root/privkey.pem",
+  "ssl-cert": "/root/cert.pem",  
+
+  "log-file": "/var/log/git-auto-deploy.log",
+
+  "global_deploy": [
+    "echo Deploy started!",
+    "echo Deploy completed!"
+  ],
+  "repositories": [
+    {
+      "url": "git@github.com:irvinjo/food2molec.git",
+      "branch": "master",
+      "remote": "origin",
+      "path": "/var/www/food2molec",
+      "deploy": "make redeploy -C /var/www/food2molec"
+    }
+  ]
+}
