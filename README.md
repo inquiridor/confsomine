@@ -1,2 +1,2 @@
 # confsomine
-All configs I need
+All configs I need for my personal use.
