@@ -23,7 +23,7 @@ All configs I need for my personal use.
 	
   $ jupyter notebook --generate-config
 
-## Needed Software
+## Personal Needed Software
 
 * **Postgress in Debian distros**
 
