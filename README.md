@@ -42,3 +42,8 @@ All configs I need for my personal use.
   cd redis-stable
   make
   sudo make install
+
+* **ANSIBLE**
+  [Ansible.com]https://www.ansible.com/
+* **VAGRANT**
+  [Vagrant]https://www.vagrantup.com/
