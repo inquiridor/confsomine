@@ -1,7 +1,7 @@
 # confsomine
 All configs I need for my personal use.
 
-## ~/emacs.files
+## ~/emacs.files:
 	
 	* .spacemacs 
 	  
@@ -13,12 +13,12 @@ All configs I need for my personal use.
 	
 	* $ ./configure --with-xwidgets --with-x-toolkit=gtk3
 
-## ~/jupy.files
+## ~/jupy.files:
 
-	* .jupyter_notebook_config.py
+	1. .jupyter_notebook_config.py
 
-	* jupyter notebook's personal config
+	2. jupyter notebook's personal config
 
-	* RUN THIS COMMAND AND COPY THE .PY FILE TO .jupyter
+	3. RUN THIS COMMAND AND COPY THE .PY FILE TO .jupyter
 	
-	  $ jupyter notebook --generate-config
+	   $ jupyter notebook --generate-config
