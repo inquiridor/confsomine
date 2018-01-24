@@ -44,7 +44,7 @@ All configs I need for my personal use.
   sudo make install
 
 * **ANSIBLE**
-  [Ansible.com](https://www.ansible.com/)
+  [Ansible](https://www.ansible.com/)
 
 * **VAGRANT**
   [Vagrant](https://www.vagrantup.com/)
