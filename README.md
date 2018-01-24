@@ -19,7 +19,7 @@ All configs I need for my personal use.
 
   jupyter notebook's personal config
 
-* **RUN THIS COMMAND AND COPY THE .PY FILE TO .jupyter**
+* **RUN THIS COMMAND AND COPY THE .py FILE TO .jupyter**
 	
   $ jupyter notebook --generate-config
 
@@ -44,6 +44,10 @@ All configs I need for my personal use.
   sudo make install
 
 * **ANSIBLE**
-  [Ansible.com]https://www.ansible.com/
+  [Ansible.com](https://www.ansible.com/)
+
 * **VAGRANT**
-  [Vagrant]https://www.vagrantup.com/
+  [Vagrant](https://www.vagrantup.com/)
+
+* **NodeJS installation via binary archive**
+  [NodeJS](https://github.com/nodejs/help/wiki/Installation)
