@@ -40,7 +40,5 @@ All configs I need for my personal use.
 
   tar xzvf redis-stable.tar.gz
   cd redis-stable
-
   make
-
   sudo make install
