@@ -22,3 +22,7 @@ All configs I need for my personal use.
 	- RUN THIS COMMAND AND COPY THE .PY FILE TO .jupyter
 	
 	  - $ jupyter notebook --generate-config
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
