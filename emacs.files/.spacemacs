@@ -62,7 +62,6 @@ values."
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
-     spell-checking
      (spell-checking :variables
                      spell-checking-enable-auto-dictionary t
                      =enable-flyspell-auto-completion= t
