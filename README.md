@@ -53,10 +53,13 @@ All configs I need for my personal use.
   [NodeJS](https://github.com/nodejs/help/wiki/Installation)
 
 * **Flash Player**
+
   $ sudo apt install pepperflashplugin-nonfree
 
 * **ALSAMIXER: volume controller**
+
   $ alsamixer
   
-* **ARandR: multimonitors**
+* **ARandR: multi monitor**
+
   $ sudo apt install arandr
