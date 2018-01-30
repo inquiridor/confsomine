@@ -60,9 +60,9 @@ All configs I need for my personal use.
 
   $ sudo apt install pepperflashplugin-nonfree
 
-* **ALSAMIXER: volume controller**
+* **PAVUCONTROL: Volume Controller**
 
-  $ alsamixer
+  $ sudo apt install pavucontrol
   
 * **ARandR: multi monitor**
 
