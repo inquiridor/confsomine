@@ -7,7 +7,7 @@ All configs I need for my personal use.
 	  
   spacemacs personal config
 
-* **RUN THIS COMMAND TO INSTALL EMACS DEPENDENCIES AND TO CONFIGURE IT**
+* **RUN THIS COMMANDS TO INSTALL EMACS DEPENDENCIES AND TO CONFIGURE IT**
 	
   $ sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls-dev libpng-dev libncurses-dev libgtk-3-dev libwebkitgtk-3.0-dev xinit xorg-server-source xserver-xorg build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev libxpm-dev automake autoconf
 	
@@ -23,7 +23,11 @@ All configs I need for my personal use.
 	
   $ jupyter notebook --generate-config
 
-## Personal Needed Software
+## Personal Needed Software and others
+
+* **Theme**
+
+  [Solarized Dark XFCE] (https://github.com/mzgnr/solarized-dark-xfce)
 
 * **Postgress in Debian distros**
 
