@@ -51,3 +51,12 @@ All configs I need for my personal use.
 
 * **NodeJS installation via binary archive**
   [NodeJS](https://github.com/nodejs/help/wiki/Installation)
+
+* **Flash Player**
+  $ sudo apt install pepperflashplugin-nonfree
+
+* **ALSAMIXER: volume controller**
+  $ alsamixer
+  
+* **ARandR: multimonitors**
+  $ sudo apt install arandr
