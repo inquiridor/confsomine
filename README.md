@@ -19,6 +19,12 @@ All configs I need for my personal use.
 
   jupyter notebook's personal config
 
+## ~/zsh.files:
+
+* **.zshrc**
+
+  Oh My Zsh config 
+
 * **RUN THIS COMMAND AND COPY THE .py FILE TO .jupyter**
 	
   $ jupyter notebook --generate-config
