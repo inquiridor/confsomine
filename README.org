@@ -40,7 +40,8 @@ jupyter notebook --generate-config
 ** 4. Distro theme and tools
 
 - *Theme*
-  [[https://github.com/mzgnr/solarized-dark-xfce][Solarized Dark XFCE]]
+
+[[https://github.com/mzgnr/solarized-dark-xfce][Solarized Dark XFCE]]
 
 - *Postgress in Debian distros*
 
