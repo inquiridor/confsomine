@@ -1,13 +1,13 @@
-* confsomine
+* CONFSOMINE
 All configs I need for my personal use.
 
-# ~/emacs.files:
+** ~/emacs.files:
 
-* 1) .spacemacs 
+*** *.spacemacs* 
 	  
   spacemacs personal config
 
-** RUN THIS COMMANDS TO INSTALL EMACS DEPENDENCIES AND TO CONFIGURE IT
+*** RUN THIS COMMANDS TO INSTALL EMACS DEPENDENCIES AND TO CONFIGURE IT
 	
 #+begin_src sh
 sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls-dev libpng-dev libncurses-dev libgtk-3-dev libwebkitgtk-3.0-dev xinit xorg-server-source xserver-xorg build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev libxpm-dev automake autoconf
@@ -15,17 +15,21 @@ sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls-dev lib
 ./configure --with-xwidgets --with-x-toolkit=gtk3 --with-cairo --with-modules
 #+end_src
 
-* 2) ~/jupy.files:
+** ~/jupy.files:
 
-* **.jupyter_notebook_config.py**
+*** .jupyter_notebook_config.py
 
-  jupyter notebook's personal config
+#+begin_src sh  
+jupyter notebook's personal config
+#+end_src
 
-* **RUN THIS COMMAND AND COPY THE .py FILE TO .jupyter**
-	
-  $ jupyter notebook --generate-config
+*** RUN THIS COMMAND AND COPY THE .py FILE TO .jupyter
 
-## ~/zsh.files:
+#+begin_src sh	
+jupyter notebook --generate-config
+#+end_src
+
+** ~/zsh.files:
 
 * **.zshrc**
 
