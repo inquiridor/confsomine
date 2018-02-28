@@ -53,9 +53,13 @@ jupyter notebook --generate-config
 
 #+begin_src sh
 sudo apt-getupdate
+#+end_src
+
+#+begin_src sh
 sudo apt-getinstallbuild-essential tcl
 #+end_src
 
+#+begin_src sh
 cd /tmp
 
 curl -O http://download.redis.io/redis-stable.tar.gz
@@ -64,6 +68,7 @@ tar xzvf redis-stable.tar.gz
 cd redis-stable
 make
 sudo make install
+#+end_src
 
 - *ANSIBLE*
 
