@@ -39,9 +39,23 @@ jupyter notebook --generate-config
 
 ** 4. Distro theme and tools
 
-- *Theme*
+make the things in /etc/sources.list
+apt update
+apt upgrade
+vim
+sudo
+make the things in /etc/sudoers
+git
+nodejs
+xampp
+emacs
+
+- *Theme & Icons*
 
 [[https://github.com/mzgnr/solarized-dark-xfce][Solarized Dark XFCE]]
+
+
+
 
 - *Postgress in Debian distros*
 
