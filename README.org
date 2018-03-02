@@ -1,11 +1,12 @@
 * CONFSOMINE
+
 All configs I need for my personal use.
 
 ** 1. ~/emacs.files:
 
 - *.spacemacs*
 	  
-spacemacs personal config
+Spacemacs personal config
 
 - *RUN THIS COMMANDS TO INSTALL EMACS DEPENDENCIES AND TO CONFIGURE IT*
 
@@ -21,9 +22,7 @@ sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls28-dev l
 
 - *.jupyter_notebook_config.py*
 
-#+begin_src sh  
-jupyter notebook's personal config
-#+end_src
+Jupyter notebook's personal config
 
 - *RUN THIS COMMAND AND COPY THE .py FILE TO .jupyter*
 
@@ -35,27 +34,53 @@ jupyter notebook --generate-config
 
 - *.zshrc*
 
-  Oh My Zsh config 
+Oh My Zsh config 
 
-** 4. Distro theme and tools
+** 4. Distro's setup
 
-make the things in /etc/sources.list
+- *Just after install*
+
+#+begin_src sh
+nano /etc/sources.list
+
 apt update
+
 apt upgrade
-vim
-sudo
-make the things in /etc/sudoers
-git
-nodejs
+
+apt install vim
+
+apt install sudo
+
+vim /etc/sudoers
+
+apt install git
+
+sudo apt install zsh
+#+end_src 
+
+- *Download*
+
+nodejs & npm
+
 xampp
+
 emacs
 
-- *Theme & Icons*
+pip
 
-[[https://github.com/mzgnr/solarized-dark-xfce][Solarized Dark XFCE]]
+- *Theme*
 
+[[https://github.com/schemar/solarc-theme][solarc-theme]]
 
+- *Icons*
 
+[[https://github.com/numixproject/numix-icon-theme-circle][numix-icon-theme-circle]]
+
+Dependency to install:
+
+#+begin_src sh
+sudo apt install numix-icon-theme
+#+end_src
 
 - *Postgress in Debian distros*
 
@@ -92,24 +117,8 @@ sudo make install
 
 [[https://www.vagrantup.com/][Vagrant]]
 
-- *NodeJS installation via binary archive*
-  
-[[https://github.com/nodejs/help/wiki/Installation][NodeJS]]
-
 - *Flash Player*
 
 #+begin_src sh
 sudo apt install pepperflashplugin-nonfree
 #+end_Src
-
-- *PAVUCONTROL: Volume Controller*
-
-#+begin_src sh
-sudo apt install pavucontrol
-#+end_src
-  
-- *ARandR: multi monitor*
-
-#+begin_src sh
-sudo apt install arandr
-#+end_src
