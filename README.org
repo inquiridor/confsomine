@@ -1,7 +1,5 @@
 * CONFSOMINE
 
-All configs I need for my personal use.
-
 ** 1. ~/emacs.files:
 
 - *.spacemacs*
