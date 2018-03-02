@@ -66,6 +66,12 @@ emacs
 
 pip
 
+php
+
+wakatime
+
+jupyter-notebook
+
 - *Theme*
 
 [[https://github.com/schemar/solarc-theme][solarc-theme]]
