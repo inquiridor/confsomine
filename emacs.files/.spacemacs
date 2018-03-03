@@ -195,6 +195,7 @@ values."
                                       web-beautify
                                       json-snatcher
                                       livid-mode
+                                      yasnippet
 
 
                                       (elixir-mode
