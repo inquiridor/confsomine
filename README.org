@@ -16,6 +16,23 @@ sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls28-dev l
 ./configure --with-xwidgets --with-x-toolkit=gtk3 --with-cairo --with-modules
 #+end_src
 
+- *MY LAYERS DEPENDENCIES*
+#+begin_src sh
+sudo npm install -g tern
+
+sudo npm install -g eslint babel-eslint eslint-plugin-react
+
+sudo npm install -g js-beautify
+
+sudo npm install -g eslint
+
+sudo pip install  jedi==0.8.1 json-rpc==1.8.1 service_factory==0.1.2
+
+sudo pip install autoflake
+
+sudo pip install autoflake
+#+end_src
+
 ** 2. ~/jupy.files:
 
 - *.jupyter_notebook_config.py*
@@ -53,24 +70,32 @@ vim /etc/sudoers
 
 apt install git
 
+sudo apt install curl
+
+sudo apt install wakatime
+
 sudo apt install zsh
 #+end_src 
 
-- *Download*
+- *Node JS*
 
-nodejs & npm
+https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
-xampp
+- *LEMP*
 
-emacs
+https://www.howtoforge.com/tutorial/install-and-configure-lemp-in-debian-9/
 
-pip
+- *emacs*
 
-php
+http://mirror.cedia.org.ec/gnu/emacs/
 
-wakatime
+- *pip*
 
-jupyter-notebook
+curl https://bootstrap.pypa.io/get-pip.py | sudo python3
+
+- *jupyter-notebook*
+
+http://jupyter.org/install
 
 - *Theme*
 
