@@ -168,6 +168,7 @@ values."
 
                                       s
                                       ein
+                                      nose
                                       dash
                                       pytest
                                       request
@@ -187,6 +188,13 @@ values."
 
 
                                       php-mode
+
+
+                                      js2-mode
+                                      js2-refactor-mode
+                                      web-beautify-js
+                                      json-mode
+                                      livid-mode
 
 
                                       (elixir-mode
@@ -473,15 +481,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; Git
   (setq-default git-magit-status-fullscreen t)
   (setq-default git-enable-magit-svn-plugin t)
-
-
-
-  ;; Revisar TODO ESTO
-  (setq-default js2-basic-offset 2)
-  (setq-default js-indent-level 2)
-  (setq-default git-magit-status-fullscreen t)
-  (setq-default git-enable-magit-svn-plugin t)
-
 )
 
 (defun dotspacemacs/user-config ()
@@ -519,22 +518,22 @@ you should place your code here."
     (setq org-confirm-babel-evaluate nil)
   )
 
-  ;; typografia
+  ;; ==== typografia
   (typo-global-mode 1)
   (add-hook 'text-mode-hook 'typo-mode)
 
-  ;; git 
+  ;; ==== git
   (setq magit-repository-directories '("~/repositories/"))
   (global-git-commit-mode t)
 
-  ;; latex confug user
+  ;; ==== latex
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
   (company-auctex-init)
   (global-evil-matchit-mode 1)
   (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
   (add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
 
-  ;; react layer
+  ;; ==== react layer
   (setq-default
    ;; js2-mode
    js2-basic-offset 2
@@ -549,77 +548,44 @@ you should place your code here."
     (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
     (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
-  ;; javascriot
+  ;; ==== javascriot
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
 
-  ;; search enguine
+  ;; ==== search enguine
   (setq browse-url-browser-function 'browse-url-generic
         engine/browser-function 'browse-url-generic
         browse-url-generic-program "google-chrome")
 
-  ;; clojure agregar al confug user
+  ;; ==== clojure
   (setq clojure-enable-fancify-symbols t)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  (require 'nose)
+  ;; ==== ipython layer
+  (setq ein:use-auto-complete-superpack t)
+  (setq ein:use-smartrep t)
   (add-hook 'term-mode-hook 'toggle-truncate-lines)
 
 
+  ;; (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+  ;;  (add-hook 'js-mode-hook (lambda () (setq js-indent-level 2)))
 
-  (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
-  (add-hook 'js-mode-hook (lambda () (setq js-indent-level 2)))
+  ;;  (defun my-web-mode-hook ()
+  ;;    "Hooks for Web mode."
+  ;;    (setq web-mode-markup-indent-offset 2)
+  ;;    (setq web-mode-css-indent-offset 2)
+  ;;    (setq web-mode-code-indent-offset 2)
+  ;;    )
+  ;;  (add-hook 'web-mode-hook  'my-web-mode-hook)
+  ;;  (add-to-list 'auto-mode-alist '("\\.api\\'" . web-mode))
+  ;;  (add-to-list 'auto-mode-alist '("/some/react/path/.*\\.js[x]?\\'" . web-mode))
 
-
-
-  (defun my-web-mode-hook ()
-    "Hooks for Web mode."
-    (setq web-mode-markup-indent-offset 2)
-    (setq web-mode-css-indent-offset 2)
-    (setq web-mode-code-indent-offset 2)
-    )
-  (add-hook 'web-mode-hook  'my-web-mode-hook)
-  (add-to-list 'auto-mode-alist '("\\.api\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("/some/react/path/.*\\.js[x]?\\'" . web-mode))
-
-  (setq web-mode-content-types-alist
-        '(("json" . "/some/path/.*\\.api\\'")
-          ("xml"  . "/other/path/.*\\.api\\'")
-          ("jsx"  . "/some/react/path/.*\\.js[x]?\\'")))
+  ;;  (setq web-mode-content-types-alist
+  ;;        '(("json" . "/some/path/.*\\.api\\'")
+  ;;          ("xml"  . "/other/path/.*\\.api\\'")
+  ;;          ("jsx"  . "/some/react/path/.*\\.js[x]?\\'")))
 
 
-  ;; PHP mode
+  ;; ==== PHP mode
   (add-hook 'php-mode-hook 'my-php-mode-hook)
   (defun my-php-mode-hook ()
     "My PHP mode configuration."
@@ -628,20 +594,18 @@ you should place your code here."
           c-basic-offset 2))
 
 
-  ;; All the icons 
+  ;; ==== All the icons 
   (global-set-key [f8] 'neotree-toggle)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 
-  ;; ein
-  (setq ein:use-auto-complete-superpack t)
-  (setq ein:use-smartrep t)
-
-  ;; Multiple cursos
+  ;; ==== Multiple cursos
   (global-set-key (kbd "C-c m c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
