@@ -34,6 +34,20 @@ sudo pip install  jedi==0.8.1 json-rpc==1.8.1 service_factory==0.1.2
 sudo pip install autoflake wakatime
 #+end_src
 
+- *Love Emacs but need to fuck VS Code due to a nodeJs project?*
+
+VSpaceCode!:
+
+https://github.com/VSpaceCode/VSpaceCode#presentation
+
+Some set up:
+
+https://marketplace.visualstudio.com/items?itemName=nodesource.vscode-for-node-js-development-pack
+
+https://marketplace.visualstudio.com/items?itemName=gerane.Theme-Dracula
+
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+
 ** 2. ~/jupy.files:
 
 - *.jupyter_notebook_config.py*
