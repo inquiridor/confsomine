@@ -62,13 +62,13 @@ jupyter notebook --generate-config
 
 - *ADVICES FOR SOME KERNELS INSTALLATION*
 
-*1.- In IHaskell:*
+*+ In IHaskell:*
 
 URL: https://github.com/gibiansky/IHaskell#linux
 
 use
 
-*2.- In IJavascript*
+*+ In IJavascript:*
 
 URL: https://github.com/n-riesco/ijavascript#ubuntu
 
