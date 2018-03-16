@@ -19,19 +19,9 @@ sudo apt install libgif-dev libtiff-dev libjpeg-dev libxpm-dev libgnutls28-dev l
 - *Some layers dependencies*
 
 #+begin_src sh
-sudo npm install -g tern
+sudo npm install -g tern eslint babel-eslint eslint-plugin-react js-beautify swank-js node-resolver
 
-sudo npm install -g eslint babel-eslint eslint-plugin-react
-
-sudo npm install -g js-beautify
-
-sudo npm install -g swank-js
-
-sudo npm install -g node-resolver
-
-sudo pip install  jedi==0.8.1 json-rpc==1.8.1 service_factory==0.1.2
-
-sudo pip install autoflake wakatime
+sudo pip install  jedi==0.8.1 json-rpc==1.8.1 service_factory==0.1.2 autoflake wakatime
 #+end_src
 
 - *Love Emacs but need to fuck VS Code due to a nodeJs project?*
