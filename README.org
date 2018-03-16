@@ -60,7 +60,7 @@ Jupyter notebook's personal config
 jupyter notebook --generate-config
 #+end_src
 
-- *ADVICES FOR SOME KERNEL'S INSTALLATION*
+- *ADVICES FOR SOME KERNELS INSTALLATION*
 
 1.- In IHaskell:
 
