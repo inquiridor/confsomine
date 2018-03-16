@@ -62,13 +62,13 @@ jupyter notebook --generate-config
 
 - *ADVICES FOR SOME KERNELS INSTALLATION*
 
-1.- *In IHaskell:*
+*1.- In IHaskell:*
 
 URL: https://github.com/gibiansky/IHaskell#linux
 
 use
 
-2.- *In IJavascript*
+*2.- In IJavascript*
 
 URL: https://github.com/n-riesco/ijavascript#ubuntu
 
@@ -80,7 +80,7 @@ Try to make some *chmod <some-num-combination>* to give your user permission ove
 curl -sSL https://get.haskellstack.org/ | sh -s - -f
 #+end_src
 
-and add *“$HOME/.local/bin“* to the PATH in .zshrc
+and add *$HOME/.local/bin* to the PATH in .zshrc
 
 ** 3. ~/zsh.files:
 
