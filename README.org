@@ -28,6 +28,8 @@ sudo apt install haskell-platform
 cabal apply-refact hlint stylish-haskell hasktags hoogle ghc-mod intero
 #+end_src
 
+We have to add cabal (or stack) to our PATH: https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/haskell#setup-path
+
 - *Love Emacs but need to fuck VS Code due to a nodeJs project?*
 
 VSpaceCode!:
