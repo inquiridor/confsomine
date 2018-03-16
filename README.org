@@ -60,6 +60,20 @@ Jupyter notebook's personal config
 jupyter notebook --generate-config
 #+end_src
 
+- *ADVICES FOR SOME KERNEL'S INSTALLATION*
+
+1.- In IHaskell:
+
+URL: https://github.com/gibiansky/IHaskell#linux
+
+use
+
+#+begin_src sh
+curl -sSL https://get.haskellstack.org/ | sh -s - -f
+#+end_src
+
+and add *“$HOME/.local/bin“* to the PATH in .zshrc
+
 ** 3. ~/zsh.files:
 
 - *.zshrc*
