@@ -43,7 +43,7 @@ values."
      (auto-completion :variables
                       spacemacs-default-company-backends '(company-files company-capf)
                       auto-completion-enable-sort-by-usage t
-                      auto-completion-enable-help-tooltip 'manual
+                      ;; auto-completion-enable-help-tooltip 'manual
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-return-key-behavior 'complete
@@ -195,13 +195,23 @@ values."
                                       web-beautify
                                       json-snatcher
                                       livid-mode
+                                      nodejs-repl
+                                      node-resolver
+                                      indium
+
+
                                       yasnippet
+                                      auto-yasnippet
+                                      company
+                                      auto-complete
 
 
                                       (elixir-mode
                                        (elixir-enable-compilation-checking . t))
                                       alchemist
 
+                                      haskell-mode
+                                      haskell-emacs
 
                                       nginx-mode
 
@@ -514,8 +524,8 @@ you should place your code here."
         (sql, t)
         (sqlite, t)
         (css, t)
-        )
-     )
+      )
+    )
     (setq org-confirm-babel-evaluate nil)
   )
 
@@ -552,6 +562,34 @@ you should place your code here."
   ;; ==== javascriot
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
+
+  (autoload 'js2-mode "js2-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+  ;; ==== nodejs
+  ;; == indium
+  (add-hook 'js-mode-hook #'indium-interaction-mode)
+  ;; == nodejs-repl
+  (add-hook 'js-mode-hook
+            (lambda ()
+              (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-expression)
+              (define-key js-mode-map (kbd "C-c C-j") 'nodejs-repl-send-line)
+              (define-key js-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region)
+              (define-key js-mode-map (kbd "C-c C-l") 'nodejs-repl-load-file)
+              (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl)))
+  ;; == node-ac
+  ;;(add-to-list 'load-path "~/.emacs.d/node-ac")
+  ;;(require 'node-ac-mode)
+  ;;(setq node-ac-node-modules-path "/usr/lib/node_modules")
+  ;;(add-hook 'js2-mode-hook
+  ;;          (lambda ()
+  ;;            (local-set-key (kbd "C-.") 'node-ac-auto-complete)
+  ;;          (local-set-key (kbd "C-c C-d") 'node-ac-show-document)
+  ;;            (local-set-key (kbd "C-c C-j") 'node-ac-jump-to-definition)))
+
+  ;; ==== yasnippet
+  (yas-global-mode 1)
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
 
   ;; ==== search enguine
   (setq browse-url-browser-function 'browse-url-generic
@@ -606,7 +644,8 @@ you should place your code here."
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-
+  ;; ==== Auto Complete
+  (ac-config-default)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -620,7 +659,7 @@ you should place your code here."
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (quelpa elixir-yasnippets auctex-latexmk wgrep typo spray smex slime-company slime rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv projectile-rails rake pdf-tools ob-elixir noflet minitest ivy-hydra flycheck-mix flycheck-credo feature-mode ensime sbt-mode scala-mode engine-mode dockerfile-mode docker tablist docker-tramp disaster counsel-projectile counsel swiper ivy company-c-headers common-lisp-snippets cmake-mode clojure-snippets clj-refactor inflections edn paredit peg clang-format cider-eval-sexp-fu cider seq queue clojure-mode chruby bundler inf-ruby alchemist elixir-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode powerline spinner hydra parent-mode projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight bind-map bind-key packed f dash s helm avy helm-core async popup jsx-mode org-babel-eval-in-repl smartrep xpm jedi org-mime helm-spotify-plus let-alist python-mode ein-mumamo ein request-deferred websocket deferred dynamic-fonts memoize font-lock+ all-the-icons gruvbox-dark-theme darktooth-dark-theme pastels-on-dark-theme molokai-dark-theme zenburn-theme zen-and-art-theme yapfify yaml-mode xkcd web-mode web-beautify wakatime-mode underwater-theme ujelly-theme typit mmt twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sudoku sublime-themes subatomic256-theme subatomic-theme spotify spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slim-mode seti-theme selectric-mode scss-mode sass-mode reverse-theme rainbow-mode rainbow-identifiers railscasts-theme pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme pony-mode planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pacmacs organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme nginx-mode naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme livid-mode skewer-mode simple-httpd live-py-mode light-soap-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jbeans-theme jazz-theme ir-black-theme intero inkpot-theme hy-mode hlint-refactor hindent heroku-theme hemisu-theme helm-spotify multi helm-pydoc helm-hoogle helm-css-scss hc-zenburn-theme haskell-snippets haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flycheck-haskell flatui-theme flatland-theme farmhouse-theme espresso-theme emoji-cheat-sheet-plus emmet-mode dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme company-web web-completion-data company-tern dash-functional tern company-ghci company-ghc ghc haskell-mode company-emoji company-cabal company-auctex company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-identifiers-mode coffee-mode cmm-mode clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auctex apropospriate-theme anti-zenburn-theme anaconda-mode pythonic ample-zen-theme ample-theme alect-themes afternoon-theme 2048-game xterm-color unfill stickyfunc-enhance srefactor smeargle shell-pop ox-reveal ox-gfm orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow ibuffer-projectile htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (flymake-haskell-multi haskell-emacs ac-haskell-process org-plus-contrib indium node-resolver package-build nodejs-repl quelpa elixir-yasnippets auctex-latexmk wgrep typo spray smex slime-company slime rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv projectile-rails rake pdf-tools ob-elixir noflet minitest ivy-hydra flycheck-mix flycheck-credo feature-mode ensime sbt-mode scala-mode engine-mode dockerfile-mode docker tablist docker-tramp disaster counsel-projectile counsel swiper ivy company-c-headers common-lisp-snippets cmake-mode clojure-snippets clj-refactor inflections edn paredit peg clang-format cider-eval-sexp-fu cider seq queue clojure-mode chruby bundler inf-ruby alchemist elixir-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode powerline spinner hydra parent-mode projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight bind-map bind-key packed f dash s helm avy helm-core async popup jsx-mode org-babel-eval-in-repl smartrep xpm jedi org-mime helm-spotify-plus let-alist python-mode ein-mumamo ein request-deferred websocket deferred dynamic-fonts memoize font-lock+ all-the-icons gruvbox-dark-theme darktooth-dark-theme pastels-on-dark-theme molokai-dark-theme zenburn-theme zen-and-art-theme yapfify yaml-mode xkcd web-mode web-beautify wakatime-mode underwater-theme ujelly-theme typit mmt twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sudoku sublime-themes subatomic256-theme subatomic-theme spotify spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slim-mode seti-theme selectric-mode scss-mode sass-mode reverse-theme rainbow-mode rainbow-identifiers railscasts-theme pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme pony-mode planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pacmacs organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme nginx-mode naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme livid-mode skewer-mode simple-httpd live-py-mode light-soap-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jbeans-theme jazz-theme ir-black-theme intero inkpot-theme hy-mode hlint-refactor hindent heroku-theme hemisu-theme helm-spotify multi helm-pydoc helm-hoogle helm-css-scss hc-zenburn-theme haskell-snippets haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flycheck-haskell flatui-theme flatland-theme farmhouse-theme espresso-theme emoji-cheat-sheet-plus emmet-mode dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme company-web web-completion-data company-tern dash-functional tern company-ghci company-ghc ghc haskell-mode company-emoji company-cabal company-auctex company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-identifiers-mode coffee-mode cmm-mode clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auctex apropospriate-theme anti-zenburn-theme anaconda-mode pythonic ample-zen-theme ample-theme alect-themes afternoon-theme 2048-game xterm-color unfill stickyfunc-enhance srefactor smeargle shell-pop ox-reveal ox-gfm orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow ibuffer-projectile htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
