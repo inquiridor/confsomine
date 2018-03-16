@@ -68,6 +68,14 @@ URL: https://github.com/gibiansky/IHaskell#linux
 
 use
 
+2.- In IJavascript
+
+URL: https://github.com/n-riesco/ijavascript#ubuntu
+
+If some problems to install npm -g ijavascript?
+
+Try to make some chmod <some-num-combination> to give your user permission over “/usr/lib/node_modules”. Be Careful with it!!!
+
 #+begin_src sh
 curl -sSL https://get.haskellstack.org/ | sh -s - -f
 #+end_src
