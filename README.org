@@ -52,7 +52,7 @@ jupyter notebook --generate-config
 
 - *ADVICES FOR SOME KERNELS INSTALLATION*
 
-*h. In IHaskell:* https://github.com/gibiansky/IHaskell#linux
+*h. IHaskell:* https://github.com/gibiansky/IHaskell#linux
 
 Add *$HOME/.local/bin* to the PATH in .zshrc, and use this for the first command:
 
@@ -60,7 +60,7 @@ Add *$HOME/.local/bin* to the PATH in .zshrc, and use this for the first command
 curl -sSL https://get.haskellstack.org/ | sh -s - -f
 #+end_src
 
-*j. In IJavascript:* https://github.com/n-riesco/ijavascript#ubuntu
+*j. IJavascript:* https://github.com/n-riesco/ijavascript#ubuntu
 
 If some problems to install npm -g ijavascript try to make some *chmod <some-num-combination>* to give your user permission over */usr/lib/node_modules*. Be Careful with it!!!
 
