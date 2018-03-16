@@ -72,9 +72,7 @@ curl -sSL https://get.haskellstack.org/ | sh -s - -f
 
 *j. In IJavascript:* https://github.com/n-riesco/ijavascript#ubuntu
 
-If some problems to install npm -g ijavascript?
-
-Try to make some *chmod <some-num-combination>* to give your user permission over */usr/lib/node_modules*. Be Careful with it!!!
+If some problems to install npm -g ijavascript try to make some *chmod <some-num-combination>* to give your user permission over */usr/lib/node_modules*. Be Careful with it!!!
 
 ** 3. ~/zsh.files:
 
