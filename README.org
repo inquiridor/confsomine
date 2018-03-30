@@ -124,7 +124,7 @@ https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-di
 
 - *Octave*
 
-https://www.gnu.org/software/octave/#install
+https://wiki.octave.org/Octave_for_Debian_systems
 
 - *LEMP*
 
