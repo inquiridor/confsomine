@@ -122,6 +122,10 @@ http://mirror.cedia.org.ec/gnu/emacs/
 
 https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
+- *Octave*
+
+https://www.gnu.org/software/octave/#install
+
 - *LEMP*
 
 https://www.howtoforge.com/tutorial/install-and-configure-lemp-in-debian-9/
