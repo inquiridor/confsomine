@@ -126,6 +126,8 @@ https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-di
 
 https://wiki.octave.org/Octave_for_Debian_systems
 
+https://github.com/cbm755/octsympy#how-to-install
+
 - *LEMP*
 
 https://www.howtoforge.com/tutorial/install-and-configure-lemp-in-debian-9/
