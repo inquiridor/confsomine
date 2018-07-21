@@ -1,0 +1,23 @@
+* Usefull commands
+  
+#+begin_src shell
+$ sudo apt install net-tools
+
+$ sudo netstat -plnt
+
+
+$ sudo service nginx [start | stop | reload | status | restart]
+
+$ sudo systemctl [start | stop | reload | status | restart] nginx
+
+$ sudo nginx -t
+
+$ ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/mysite.com 
+
+
+$ sudo apt-get remove nginx nginx-common
+
+$ sudo apt-get purge nginx nginx-common
+
+$ sudo apt-get autoremove
+#+end_src
