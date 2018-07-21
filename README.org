@@ -120,6 +120,8 @@ http://mirror.cedia.org.ec/gnu/emacs/
 
 - *Node JS*
 
+npm install --unsafe-perm 
+
 https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
 - *Octave*

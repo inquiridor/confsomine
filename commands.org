@@ -6,9 +6,9 @@ $ sudo apt install net-tools
 $ sudo netstat -plnt
 
 
-$ sudo service nginx [start | stop | reload | status | restart]
+$ sudo service nginx [start | stop | reload | status | restart | disable | enable]
 
-$ sudo systemctl [start | stop | reload | status | restart] nginx
+$ sudo systemctl [start | stop | reload | status | restart | disable | enable] nginx
 
 $ sudo nginx -t
 
