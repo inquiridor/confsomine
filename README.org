@@ -187,4 +187,30 @@ sudo make install
 
 #+begin_src sh
 sudo apt install pepperflashplugin-nonfree
-#+end_Src
+#+end_src
+
+- *Virtualenv*
+
+Crear un /virtualenv/
+
+#+begin_src sh
+virtualenv my_file
+#+end_src
+
+Activar un /virtualenv/
+
+#+begin_src sh
+source my_file/bin/acivate
+#+end_src
+
+Instalar un paquete (p.ej. Django) en el /virtualenv/:
+
+#+begin_src sh
+(my_file) $ pip install django
+#+end_src
+
+Salir del /virtualenv/:
+
+#+begin_src sh
+(my_file) $ deactivate
+#+end_src
